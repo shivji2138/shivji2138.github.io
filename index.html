@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="popup-bg" id="popup">
+        <div class="popup-box">
+            <h2>👋 Welcome!</h2>
+            <button class="close-btn" onclick="closePopup()">See My Profile</button>
+        </div>
+    </div>
+    
+    <script>
+        // Show popup after page loads
+        window.onload = function() {
+            document.getElementById("popup").style.display = "flex";
+        };
+    
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+    <nav>
+        <div class="top">
+            <ul class="menubar" id="navpanel">
+                <li class="home" id="home">Portfolio Website</li> 
+                <li id="about"><a href="#about-section">About</a></li>
+                <li id="achievements"><a href="#achievements-section">Achievements</a></li>
+                <li id="insta"><a href="#">Instagram</a></li>
+                <li id="git"><a href="https://github.com/shivji2138">Github repository</a></li>
+                <li id="mail"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=rshivaakash2138@gmail.com" target="_blank">Mail Me</a></li>
+                <li class="ddicon"><a href="javascript:void(0);" onclick="dropbuttonclick()">&#9776;</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        function dropbuttonclick(){
+            var x = document.getElementById('navpanel');
+            if (x.className == 'menubar') {
+                x.className += 'responsive';
+            } else {
+                x.className = 'menubar';
+            }
+            var y= document.getElementById('home');
+            if (y.className == 'home'){
+                y.className += 'resp';
+            } else {
+                y.className = 'home';
+            }
+        }
+    </script>
+    <h1>SHIVA AKASH R</h1>
+    <p class="intro">Welcome to my website, have a look at it.</p>
+    <section id="about-section">
+        <h2>About SHIVA AKASH R</h2>
+        <p id="about-p">I am Shiva Akash R. I am a IT student from SRMIST Ramapuram.</p>
+        <img class='dp' src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/pic.png" width="300" height="400" >
+    </section>
+    <script>
+    
+    // Variable to track the current section
+    let x = "";
+
+    // Function to check if the About section is in view
+    window.onscroll = function() {
+        var aboutSection = document.getElementById('about-section');
+        var dpImage = document.querySelector('.dp');
+        
+        // Get the position of the About section
+        var rect = aboutSection.getBoundingClientRect();
+
+        // If About section is in view, set x to "about-section"
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            x = "about-section";
+        } else {
+            x = "";
+        }
+
+        // If x is "about-section", trigger the animation
+        if (x === "about-section") {
+            dpImage.classList.add('animateIn');
+        }
+    }
+</script>
+
+    
+    <section id="achievements-section">
+        <h2>Achievements of Shiva Akash R</h2>
+        <h3>Certifications by Shiva Akash R</h3>
+        <ol class="courses-list">
+            <li><a href="https://drive.google.com/file/d/16EreqWhMyhsvPA_-b-2-SPfYjQ79HE2Q/view?usp=drive_link">1. Javascript</a></li>
+            <li><a href="">2. React-JS</a></li>
+            <li><a href="https://drive.google.com/file/d/1ymzzA_tVEnbvXes_eyQeIJipZpyfIBa1/view?usp=drivesdk">3. Node-JS</a></li>
+            <li><a href="https://drive.google.com/file/d/1C-tg5Cp0R7J7smerZ98wgmY0DY2dHZlO/view?usp=drivesdk">4. Figma</a></li>
+            <li><a href="https://drive.google.com/file/d/1WFq_0L39YPUK1C-iL3M4UB8wGsjB62bC/view?usp=drivesdk">5. Full Stack Web Development</a></li>
+            <li><a href="">6. MySQL</a></li>
+            <li><a href="#">7. Exception & File Handling using Python</a></li>
+            <li><a href="https://drive.google.com/file/d/1bY4ki9iyfofjIbvCbHhOfZtjNkuhOWY-/view?usp=drivesdk">8. Python MySQL connectivity</a></li>
+            <li><a href="https://api2.sololearn.com/v2/certificates/CC-NOEBZXRO/image/png?t=638893709196412250">9. Prompt Engineering</a></li>
+            <li><a href="https://api2.sololearn.com/v2/certificates/CC-UX1ZHFEF/image/png?t=638903304597313800">10. Introduction to C</a></li>
+        </ol>
+        <h3>Projects</h3>
+        <ol class="courses-list">
+            <li><a href="https://github.com/shivji2138/Students_DBMS">1.Student DBMS(Using Python+MySQL)</a></li>
+            <li><a href="https://github.com/shivji2138/Dictionary">2.Dictionary(Using Python+MySQL)</a></li>
+            <li><a href="https://github.com/shivji2138/GUI_Calc">3. GUI Calc(Using Python Tkinter)</a></li>
+            <li><a href="https://github.com/shivji2138/hbd_wishes">4. Hbd wishes(Using Python Tkinter)</a></li>
+            <li><a href="https://github.com/shivji2138/friendship-day-wishes-">5. Friendship day wishes (Using MERN Stack)</a></li>
+            <li><a href="">6. Netflix Clone (Using React+ Vite JS)(Under development)</a></li>
+            <li><a href="https://github.com/shivji2138/Todo-list-app">7. Todo list app(Using React+ Vite JS)</a></li>
+        </ol>
+    </section>
+</body>
+</html>
