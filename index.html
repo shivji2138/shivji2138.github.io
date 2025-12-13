@@ -3,116 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME PAGE</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>SHIVA AKASH R - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="popup-bg" id="popup">
-        <div class="popup-box">
-            <h2>👋 Welcome!</h2>
-            <button class="close-btn" onclick="closePopup()">See My Profile</button>
-        </div>
-    </div>
-    
-    <script>
-        // Show popup after page loads
-        window.onload = function() {
-            document.getElementById("popup").style.display = "flex";
-        };
-    
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-    </script>
-    <nav>
-        <div class="top">
-            <ul class="menubar" id="navpanel">
-                <li class="home" id="home">Portfolio Website</li> 
-                <li id="about"><a href="#about-section">About</a></li>
-                <li id="achievements"><a href="#achievements-section">Achievements</a></li>
-                <li id="insta"><a href="#">Instagram</a></li>
-                <li id="git"><a href="https://github.com/shivji2138">Github repository</a></li>
-                <li id="mail"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=rshivaakash2138@gmail.com" target="_blank">Mail Me</a></li>
-                <li class="ddicon"><a href="javascript:void(0);" onclick="dropbuttonclick()">&#9776;</a></li>
-            </ul>
-        </div>
-    </nav>
-    <script>
-        function dropbuttonclick(){
-            var x = document.getElementById('navpanel');
-            if (x.className == 'menubar') {
-                x.className += 'responsive';
-            } else {
-                x.className = 'menubar';
-            }
-            var y= document.getElementById('home');
-            if (y.className == 'home'){
-                y.className += 'resp';
-            } else {
-                y.className = 'home';
-            }
-        }
-    </script>
-    <h1>SHIVA AKASH R</h1>
-    <p class="intro">Welcome to my website, have a look at it.</p>
-    <section id="about-section">
-        <h2>About SHIVA AKASH R</h2>
-        <p id="about-p">I am Shiva Akash R. I am a IT student from SRMIST Ramapuram.</p>
-        <img class='dp' src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/pic.png" width="300" height="400" >
-    </section>
-    <script>
-    
-    // Variable to track the current section
-    let x = "";
+<body class = "bg-black text-white">
 
-    // Function to check if the About section is in view
-    window.onscroll = function() {
-        var aboutSection = document.getElementById('about-section');
-        var dpImage = document.querySelector('.dp');
+
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-black text-white">
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">Hi I'm <span class="text-purple-400">Shiva Akash R</span></h1>
+        <p id="about-p" class="text-gray-400 mt-4 text-lg md:text-xl max-w-2xl">BTech IT student. MERN Stack Developer. AI Explorer</Del></p>
         
-        // Get the position of the About section
-        var rect = aboutSection.getBoundingClientRect();
+        <div class="mt-10 flex gap-4"> 
+          <a href="#projects" class="px-6 py-3 bg-purple-500 hover:bg-purple-600 rounded-xl text-black font-semibold">View Projects</a>
+          <a href="#contact-section" class="px-6 py-3 border border-gray-600 rounded-xl text-white hover:bg-white hover:text-black transition">Contact Me</a>
+        </div>
+    </section>
 
-        // If About section is in view, set x to "about-section"
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-            x = "about-section";
-        } else {
-            x = "";
-        }
+    <section id="about-section" class="px-6 py-20 bg-black text-white max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">About me</h2>
+        <p id="about-p" class="text-gray-300 leading-relaxed text-lg"> I'm Shiva Akash — a student developer who loves building modern, fast
+    and user-focused applications.  
+    I work with the MERN stack and I'm currently exploring
+    AI-powered systems to create better digital experiences.</p>
+    </section>
 
-        // If x is "about-section", trigger the animation
-        if (x === "about-section") {
-            dpImage.classList.add('animateIn');
-        }
-    }
+
+
+    <section id="certs-section">
+      <p class="text-4xl font-bold py-5 justify justify-center flex items-center">Certifications</p>
+      <p class="text-xl font-normal py-5 justify justify-center flex items-center">Click on each certificate to verify it</p>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-10">
+            <a href="https://www.mindluster.com/student/certificate/af0f79d6"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/figma.jpg" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300"/></a>
+            <a href="https://moonshot.scaler.com/s/li/VXveVGkwi0"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/js.png" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://www.mindluster.com/student/certificate/ba4ef3b5"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/fullstackweb.jpg" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://moonshot.scaler.com/s/li/cFq1aF2Ym0"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/node.png" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://moonshot.scaler.com/s/li/iBOrVnPws8"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/react.png" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://moonshot.scaler.com/s/li/vJWvYhGX8J"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/sql-scaler.png" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://www.mindluster.com/student/certificate/db22a48c"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/numpy.jpg" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://www.kaggle.com/learn/certification/shivaakashr/pandas"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/pandas.png" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://www.mygreatlearning.com/certificate/BCWZCOCI"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/tkinter.jpg" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://www.mygreatlearning.com/certificate/GJANMEWD"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/pymysql.jpg" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+            <a href="https://learn.mongodb.com/c/euQZSzbWQaW616Igj9uKZw"><img src="https://raw.githubusercontent.com/shivji2138/shivji2138.github.io/main/assests/Mongodb.png" width="400" height="250" class="shadow-md hover:shadow-xl px-2 hover:-translate-y-2 transition duration-300" /></a>
+        </div>
+            
+    </section>
+<section id="skills" class="py-20 bg-black text-white">
+  <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
+
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+
+    <div class="glass-card p-8 rounded-2xl text-center">
+      <p class="text-xl font-semibold mb-4">Frontend</p>
+      <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,vite" class="mx-auto"/>
+    </div>
+
+    <div class="glass-card p-8 rounded-2xl text-center">
+      <p class="text-xl font-semibold mb-4">Backend</p>
+      <img src="https://skillicons.dev/icons?i=nodejs,express" class="mx-auto"/>
+    </div>
+
+    <div class="glass-card p-8 rounded-2xl text-center">
+      <p class="text-xl font-semibold mb-4">Database</p>
+      <img src="https://skillicons.dev/icons?i=mongodb,mysql" class="mx-auto"/>
+    </div>
+
+    <div class="glass-card p-8 rounded-2xl text-center">
+      <p class="text-xl font-semibold mb-4">Tools</p>
+      <img src="https://skillicons.dev/icons?i=git,github,vscode,postman" class="mx-auto"/>
+    </div>
+
+    <div class="glass-card p-8 rounded-2xl text-center">
+      <p class="text-xl font-semibold mb-4">Languages</p>
+      <img src="https://skillicons.dev/icons?i=python,c,js" class="mx-auto"/>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: .3s;
+  }
+  .glass-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+</style>
+
+    <section id="work-experience">
+        
+    </section>
+
+    
+    <section id="projects" class="text-center py-16 px-4">
+        <h1 class="text-4xl font-bold text-white">Open Source Projects</h1>
+        <p class="text-gray-400 mt-2">Check out my projects on GitHub</p>
+
+        <div id="repo-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 w-full max-w-6xl mx-auto">
+        </div>
+    </section>
+
+    <script>
+  const username = "shivji2138"; // your GitHub username
+
+  fetch(`https://api.github.com/users/${username}/repos`)
+    .then(res => res.json())
+    .then(repos => {
+      const container = document.getElementById("repo-container");
+
+      repos.forEach(repo => {
+        const card = document.createElement("div");
+        card.className = `
+          bg-[#111] border border-[#222] rounded-2xl p-6 text-white 
+          hover:-translate-y-2 transition-all duration-300 hover:border-gray-600
+        `;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold flex items-center gap-2">
+              <span>📦</span> ${repo.name}
+            </h2>
+            <a href="${repo.html_url}" target="_blank" class="text-gray-300 hover:text-white">
+              ↗
+            </a>
+          </div>
+
+          <p class="text-sm text-gray-400 mt-3">
+            ${repo.description ? repo.description : "No description provided"}
+          </p>
+
+          <div class="flex items-center gap-4 text-gray-400 text-sm mt-4">
+            <span>💻 ${repo.language || "Unknown"}</span>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    });
 </script>
 
+
+
     
-    <section id="achievements-section">
-        <h2>Achievements of Shiva Akash R</h2>
-        <h3>Certifications by Shiva Akash R</h3>
-        <ol class="courses-list">
-            <li><a href="https://drive.google.com/file/d/16EreqWhMyhsvPA_-b-2-SPfYjQ79HE2Q/view?usp=drive_link">1. Javascript</a></li>
-            <li><a href="">2. React-JS</a></li>
-            <li><a href="https://drive.google.com/file/d/1ymzzA_tVEnbvXes_eyQeIJipZpyfIBa1/view?usp=drivesdk">3. Node-JS</a></li>
-            <li><a href="https://drive.google.com/file/d/1C-tg5Cp0R7J7smerZ98wgmY0DY2dHZlO/view?usp=drivesdk">4. Figma</a></li>
-            <li><a href="https://drive.google.com/file/d/1WFq_0L39YPUK1C-iL3M4UB8wGsjB62bC/view?usp=drivesdk">5. Full Stack Web Development</a></li>
-            <li><a href="">6. MySQL</a></li>
-            <li><a href="#">7. Exception & File Handling using Python</a></li>
-            <li><a href="https://drive.google.com/file/d/1bY4ki9iyfofjIbvCbHhOfZtjNkuhOWY-/view?usp=drivesdk">8. Python MySQL connectivity</a></li>
-            <li><a href="https://api2.sololearn.com/v2/certificates/CC-NOEBZXRO/image/png?t=638893709196412250">9. Prompt Engineering</a></li>
-            <li><a href="https://api2.sololearn.com/v2/certificates/CC-UX1ZHFEF/image/png?t=638903304597313800">10. Introduction to C</a></li>
-        </ol>
-        <h3>Projects</h3>
-        <ol class="courses-list">
-            <li><a href="https://github.com/shivji2138/Students_DBMS">1.Student DBMS(Using Python+MySQL)</a></li>
-            <li><a href="https://github.com/shivji2138/Dictionary">2.Dictionary(Using Python+MySQL)</a></li>
-            <li><a href="https://github.com/shivji2138/GUI_Calc">3. GUI Calc(Using Python Tkinter)</a></li>
-            <li><a href="https://github.com/shivji2138/hbd_wishes">4. Hbd wishes(Using Python Tkinter)</a></li>
-            <li><a href="https://github.com/shivji2138/friendship-day-wishes-">5. Friendship day wishes (Using MERN Stack)</a></li>
-            <li><a href="">6. Netflix Clone (Using React+ Vite JS)(Under development)</a></li>
-            <li><a href="https://github.com/shivji2138/Todo-list-app">7. Todo list app(Using React+ Vite JS)</a></li>
-        </ol>
+    <section id="contact-section">
+      <p class="flex items-center justify justify-center text-2xl font-semibold">Contact Me</p>
+        <div class="flex  items-center justify justify-center gap-4 py-10">
+          <a href="https://github.com/shivji2138"><img src="https://skillicons.dev/icons?i=github"></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rshivaakash2138@gmail.com" target="_blank"><img src="https://skillicons.dev/icons?i=gmail"></a>
+          <a href="https://www.linkedin.com/in/shiva-akash-r/"><img src="https://skillicons.dev/icons?i=linkedin"></a>
+        </div>
     </section>
-</body>
+
+
+
 </html>
