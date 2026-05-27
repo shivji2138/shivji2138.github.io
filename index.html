@@ -505,7 +505,7 @@
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rshivaakash2138@gmail.com" target="_blank" class="cemail">✉ rshivaakash2138@gmail.com</a>
     <div class="srow">
       <a href="https://github.com/shivji2138" target="_blank" class="sbtn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="filter:invert(1)"/> GitHub</a>
-      <a href="https://www.linkedin.com/in/shiva-akash-r/" target="_blank" class="sbtn"><img src="https://cdn.simpleicons.org/linkedin/0A66C2"/> LinkedIn</a>
+      <a href="https://www.linkedin.com/in/shiva-akash-r/" target="_blank" class="sbtn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"> LinkedIn</a>
     </div>
   </div>
 </section>
@@ -546,7 +546,7 @@ revs.forEach(el=>io.observe(el));
 
 /* REPOS */
 const LC={'JavaScript':'#f7df1e','TypeScript':'#3178c6','Python':'#3572A5','HTML':'#e34c26','CSS':'#563d7c','C++':'#f34b7d','C':'#555','Vue':'#42b883','Unknown':'#7b6fa0'};
-const LI={'JavaScript':'📜','TypeScript':'📘','Python':'🐍','HTML':'🌐','CSS':'🎨','C++':'⚙️','C':'🔧','Unknown':'📦'};
+// const LI={'JavaScript':'📜','TypeScript':'📘','Python':'🐍','HTML':'🌐','CSS':'🎨','C++':'⚙️','C':'🔧','Unknown':'📦'};
 
 async function loadRepos(){
   const g=document.getElementById('repos-grid');
@@ -560,13 +560,12 @@ async function loadRepos(){
     repos.forEach((repo,i)=>{
       const lang=repo.language||'Unknown';
       const col=LC[lang]||'#7b6fa0';
-      const ico=LI[lang]||'📦';
       const a=document.createElement('a');
       a.href=repo.html_url;a.target='_blank';
       a.className='repo-card reveal';
       a.style.transitionDelay=(i*.05)+'s';
       a.innerHTML=`
-        <div class="rh"><div class="ri">${ico}</div><span class="rex">↗</span></div>
+  
         <div class="rn">${repo.name}</div>
         <div class="rd">${repo.description||'No description provided.'}</div>
         <div class="rf">
